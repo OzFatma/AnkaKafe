@@ -42,7 +42,7 @@ namespace AnkaKafeUI
             // txtUrunad
             // 
             this.txtUrunad.Location = new System.Drawing.Point(19, 60);
-            this.txtUrunad.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtUrunad.Margin = new System.Windows.Forms.Padding(5);
             this.txtUrunad.Name = "txtUrunad";
             this.txtUrunad.Size = new System.Drawing.Size(133, 32);
             this.txtUrunad.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace AnkaKafeUI
             // btnEkle
             // 
             this.btnEkle.Location = new System.Drawing.Point(404, 60);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(5);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(118, 38);
             this.btnEkle.TabIndex = 2;
@@ -74,10 +74,10 @@ namespace AnkaKafeUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUrunler.Location = new System.Drawing.Point(19, 140);
-            this.dgvUrunler.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvUrunler.Margin = new System.Windows.Forms.Padding(5);
             this.dgvUrunler.Name = "dgvUrunler";
             this.dgvUrunler.RowTemplate.Height = 25;
-            this.dgvUrunler.Size = new System.Drawing.Size(652, 590);
+            this.dgvUrunler.Size = new System.Drawing.Size(543, 353);
             this.dgvUrunler.TabIndex = 3;
             // 
             // label2
@@ -94,7 +94,7 @@ namespace AnkaKafeUI
             // 
             this.nudBirimAd.DecimalPlaces = 2;
             this.nudBirimAd.Location = new System.Drawing.Point(185, 60);
-            this.nudBirimAd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nudBirimAd.Margin = new System.Windows.Forms.Padding(5);
             this.nudBirimAd.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -108,7 +108,7 @@ namespace AnkaKafeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 678);
+            this.ClientSize = new System.Drawing.Size(637, 522);
             this.Controls.Add(this.nudBirimAd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvUrunler);

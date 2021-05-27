@@ -59,8 +59,8 @@ namespace AnkaKafeUI
             // 
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.dgvSiparisdetaylari);
-            this.splitContainer1.Size = new System.Drawing.Size(652, 670);
-            this.splitContainer1.SplitterDistance = 334;
+            this.splitContainer1.Size = new System.Drawing.Size(775, 596);
+            this.splitContainer1.SplitterDistance = 297;
             this.splitContainer1.SplitterWidth = 7;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -73,7 +73,7 @@ namespace AnkaKafeUI
             this.dgvSiparisler.Location = new System.Drawing.Point(14, 65);
             this.dgvSiparisler.Margin = new System.Windows.Forms.Padding(5);
             this.dgvSiparisler.Name = "dgvSiparisler";
-            this.dgvSiparisler.Size = new System.Drawing.Size(409, 247);
+            this.dgvSiparisler.Size = new System.Drawing.Size(532, 210);
             this.dgvSiparisler.TabIndex = 1;
             // 
             // label1
@@ -108,14 +108,14 @@ namespace AnkaKafeUI
             this.dgvSiparisdetaylari.Margin = new System.Windows.Forms.Padding(5);
             this.dgvSiparisdetaylari.Name = "dgvSiparisdetaylari";
             this.dgvSiparisdetaylari.RowTemplate.Height = 25;
-            this.dgvSiparisdetaylari.Size = new System.Drawing.Size(409, 245);
+            this.dgvSiparisdetaylari.Size = new System.Drawing.Size(532, 205);
             this.dgvSiparisdetaylari.TabIndex = 0;
             // 
             // GecmisSiparislerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 670);
+            this.ClientSize = new System.Drawing.Size(775, 596);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "GecmisSiparislerForm";

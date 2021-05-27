@@ -30,7 +30,7 @@ namespace AnkaKafeUI
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMasa = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
             this.dgvSiparisDetaylar = new System.Windows.Forms.DataGridView();
             this.nudAdet = new System.Windows.Forms.NumericUpDown();
             this.cboUrun = new System.Windows.Forms.ComboBox();
@@ -58,42 +58,51 @@ namespace AnkaKafeUI
             this.label1.TabIndex = 0;
             this.label1.Text = "Ürün";
             // 
-            // btnMasa
+            // btnEkle
             // 
-            this.btnMasa.Location = new System.Drawing.Point(416, 47);
-            this.btnMasa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnMasa.Name = "btnMasa";
-            this.btnMasa.Size = new System.Drawing.Size(118, 38);
-            this.btnMasa.TabIndex = 1;
-            this.btnMasa.Text = "Ekle";
-            this.btnMasa.UseVisualStyleBackColor = true;
+            this.btnEkle.Location = new System.Drawing.Point(416, 47);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(5);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(118, 38);
+            this.btnEkle.TabIndex = 1;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // dgvSiparisDetaylar
             // 
-            this.dgvSiparisDetaylar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSiparisDetaylar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSiparisDetaylar.Location = new System.Drawing.Point(19, 95);
-            this.dgvSiparisDetaylar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvSiparisDetaylar.Margin = new System.Windows.Forms.Padding(5);
             this.dgvSiparisDetaylar.Name = "dgvSiparisDetaylar";
             this.dgvSiparisDetaylar.RowTemplate.Height = 25;
-            this.dgvSiparisDetaylar.Size = new System.Drawing.Size(533, 464);
+            this.dgvSiparisDetaylar.Size = new System.Drawing.Size(566, 468);
             this.dgvSiparisDetaylar.TabIndex = 2;
             // 
             // nudAdet
             // 
             this.nudAdet.Location = new System.Drawing.Point(218, 47);
-            this.nudAdet.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nudAdet.Margin = new System.Windows.Forms.Padding(5);
+            this.nudAdet.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudAdet.Name = "nudAdet";
             this.nudAdet.Size = new System.Drawing.Size(189, 32);
             this.nudAdet.TabIndex = 3;
+            this.nudAdet.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cboUrun
             // 
+            this.cboUrun.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUrun.FormattingEnabled = true;
             this.cboUrun.Location = new System.Drawing.Point(19, 47);
-            this.cboUrun.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cboUrun.Margin = new System.Windows.Forms.Padding(5);
             this.cboUrun.Name = "cboUrun";
             this.cboUrun.Size = new System.Drawing.Size(188, 33);
             this.cboUrun.TabIndex = 4;
@@ -110,9 +119,8 @@ namespace AnkaKafeUI
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(632, 13);
+            this.label3.Location = new System.Drawing.Point(611, 16);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 25);
@@ -121,11 +129,10 @@ namespace AnkaKafeUI
             // 
             // lblMasaNo
             // 
-            this.lblMasaNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMasaNo.BackColor = System.Drawing.Color.Tomato;
             this.lblMasaNo.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblMasaNo.ForeColor = System.Drawing.Color.White;
-            this.lblMasaNo.Location = new System.Drawing.Point(562, 95);
+            this.lblMasaNo.Location = new System.Drawing.Point(611, 95);
             this.lblMasaNo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblMasaNo.Name = "lblMasaNo";
             this.lblMasaNo.Size = new System.Drawing.Size(334, 193);
@@ -135,9 +142,8 @@ namespace AnkaKafeUI
             // 
             // btnTasi
             // 
-            this.btnTasi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTasi.Location = new System.Drawing.Point(778, 39);
-            this.btnTasi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnTasi.Location = new System.Drawing.Point(757, 42);
+            this.btnTasi.Margin = new System.Windows.Forms.Padding(5);
             this.btnTasi.Name = "btnTasi";
             this.btnTasi.Size = new System.Drawing.Size(118, 38);
             this.btnTasi.TabIndex = 8;
@@ -146,19 +152,18 @@ namespace AnkaKafeUI
             // 
             // cboMasaNo
             // 
-            this.cboMasaNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboMasaNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMasaNo.FormattingEnabled = true;
-            this.cboMasaNo.Location = new System.Drawing.Point(632, 43);
-            this.cboMasaNo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cboMasaNo.Location = new System.Drawing.Point(611, 46);
+            this.cboMasaNo.Margin = new System.Windows.Forms.Padding(5);
             this.cboMasaNo.Name = "cboMasaNo";
             this.cboMasaNo.Size = new System.Drawing.Size(136, 33);
             this.cboMasaNo.TabIndex = 9;
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(632, 305);
+            this.label5.Location = new System.Drawing.Point(665, 309);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 25);
@@ -167,9 +172,8 @@ namespace AnkaKafeUI
             // 
             // lblOdemeTutar
             // 
-            this.lblOdemeTutar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOdemeTutar.AutoSize = true;
-            this.lblOdemeTutar.Location = new System.Drawing.Point(769, 305);
+            this.lblOdemeTutar.Location = new System.Drawing.Point(802, 309);
             this.lblOdemeTutar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblOdemeTutar.Name = "lblOdemeTutar";
             this.lblOdemeTutar.Size = new System.Drawing.Size(61, 25);
@@ -178,10 +182,9 @@ namespace AnkaKafeUI
             // 
             // btnIptal
             // 
-            this.btnIptal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIptal.BackColor = System.Drawing.Color.DarkRed;
             this.btnIptal.ForeColor = System.Drawing.Color.White;
-            this.btnIptal.Location = new System.Drawing.Point(575, 377);
+            this.btnIptal.Location = new System.Drawing.Point(608, 381);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(5);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(154, 70);
@@ -191,10 +194,9 @@ namespace AnkaKafeUI
             // 
             // btnOde
             // 
-            this.btnOde.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOde.BackColor = System.Drawing.Color.LimeGreen;
             this.btnOde.ForeColor = System.Drawing.Color.White;
-            this.btnOde.Location = new System.Drawing.Point(742, 377);
+            this.btnOde.Location = new System.Drawing.Point(775, 381);
             this.btnOde.Margin = new System.Windows.Forms.Padding(5);
             this.btnOde.Name = "btnOde";
             this.btnOde.Size = new System.Drawing.Size(154, 70);
@@ -204,11 +206,10 @@ namespace AnkaKafeUI
             // 
             // btnAnasayfa
             // 
-            this.btnAnasayfa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAnasayfa.BackColor = System.Drawing.Color.MistyRose;
             this.btnAnasayfa.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAnasayfa.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnAnasayfa.Location = new System.Drawing.Point(575, 457);
+            this.btnAnasayfa.Location = new System.Drawing.Point(608, 461);
             this.btnAnasayfa.Margin = new System.Windows.Forms.Padding(5);
             this.btnAnasayfa.Name = "btnAnasayfa";
             this.btnAnasayfa.Size = new System.Drawing.Size(321, 97);
@@ -220,7 +221,7 @@ namespace AnkaKafeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 666);
+            this.ClientSize = new System.Drawing.Size(940, 578);
             this.Controls.Add(this.btnAnasayfa);
             this.Controls.Add(this.btnOde);
             this.Controls.Add(this.btnIptal);
@@ -234,7 +235,7 @@ namespace AnkaKafeUI
             this.Controls.Add(this.cboUrun);
             this.Controls.Add(this.nudAdet);
             this.Controls.Add(this.dgvSiparisDetaylar);
-            this.Controls.Add(this.btnMasa);
+            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "SiparisForm";
@@ -249,7 +250,7 @@ namespace AnkaKafeUI
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnMasa;
+        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.DataGridView dgvSiparisDetaylar;
         private System.Windows.Forms.NumericUpDown nudAdet;
         private System.Windows.Forms.ComboBox cboUrun;
