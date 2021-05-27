@@ -71,13 +71,20 @@ namespace AnkaKafeUI
             // 
             // dgvSiparisDetaylar
             // 
+            this.dgvSiparisDetaylar.AllowUserToAddRows = false;
+            this.dgvSiparisDetaylar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSiparisDetaylar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSiparisDetaylar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSiparisDetaylar.Location = new System.Drawing.Point(19, 95);
             this.dgvSiparisDetaylar.Margin = new System.Windows.Forms.Padding(5);
             this.dgvSiparisDetaylar.Name = "dgvSiparisDetaylar";
+            this.dgvSiparisDetaylar.ReadOnly = true;
+            this.dgvSiparisDetaylar.RowHeadersVisible = false;
             this.dgvSiparisDetaylar.RowTemplate.Height = 25;
+            this.dgvSiparisDetaylar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSiparisDetaylar.Size = new System.Drawing.Size(566, 468);
             this.dgvSiparisDetaylar.TabIndex = 2;
+            this.dgvSiparisDetaylar.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvSiparisDetaylar_UserDeletingRow);
             // 
             // nudAdet
             // 
