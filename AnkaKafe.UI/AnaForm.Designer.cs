@@ -1,5 +1,5 @@
 ﻿
-namespace AnkaKafeUI
+namespace AnkaKafe.UI
 {
     partial class AnaForm
     {

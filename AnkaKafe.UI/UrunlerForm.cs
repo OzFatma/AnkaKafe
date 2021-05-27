@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AnkaKafeUI
+namespace AnkaKafe.UI
 {
     public partial class UrunlerForm : Form
     {
